@@ -14,4 +14,4 @@ export const SingleVideo = ({video}) => {
 			</div>
 		</div>
 	);
-};
+}
