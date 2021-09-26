@@ -1,10 +1,37 @@
+/* Basic Set up */
+
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
+
+:root {
+  --main-light-color : rgb(38, 245, 255);
+  --main-dark-color : rgb(0, 38, 117);
+}
 
 .font1 {
   font-family: 'Grey Qo', cursive;
 }
 
+nav.bg-light {
+  background-color: var(--main-dark-color) !important;
+}
+
+
+.shadow1 {
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+}
+
+/* Video section */
+
+a.videoCard {
+  text-decoration: none;
+  color: initial;
+}
+
+img.card-img-top {
+  max-height: 50vh;
+}
+
 .videoCard {
-  max-height: 500px;
+  height: 100%;
 }
 
