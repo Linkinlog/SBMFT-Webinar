@@ -6,9 +6,18 @@ export default (state, action) => {
 	switch (action.type) {
 		case LOGIN_SUCCESS :
 			return {
+				...state,
 				isAuthenticated : true,
-				user : action.payload
+				user : action.payload,
+				loading: false,
 			}
+			case LOGOUT :
+				return {
+					...state,
+					isAuthenticated: null,
+					user: null,
+					loading: false,
+				}
 		default:
 			return state;
 	}
