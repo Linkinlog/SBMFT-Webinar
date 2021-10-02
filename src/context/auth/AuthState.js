@@ -27,6 +27,10 @@ const AuthState = (props) => {
 		return auth.signOut();
 	};
 
+	const resetPW = (email) => {
+		return auth.sendPasswordResetEmail(email);
+	};
+
 	useEffect(() => {
 		const unsubscribe = auth.onAuthStateChanged((user) => {
 			if (user) {
@@ -46,6 +50,7 @@ const AuthState = (props) => {
 		signUp,
 		login,
 		logout,
+		resetPW,
 	};
 
 	return <AuthContext.Provider value={value}>{!loading && props.children}</AuthContext.Provider>;

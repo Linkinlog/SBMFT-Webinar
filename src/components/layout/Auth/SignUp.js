@@ -52,18 +52,18 @@ export const SignUp = () => {
 							<Form onSubmit={onSubmit}>
 								<Form.Group id='email'>
 									<Form.Label>Email</Form.Label>
-									<Form.Control type='email' ref={email} required />
+									<Form.Control type='email' ref={email} autoComplete="username" required />
 								</Form.Group>
 								<Form.Group id='password'>
 									<Form.Label>Password</Form.Label>
-									<Form.Control type='password' ref={password} required />
+									<Form.Control type='password' autoComplete="new-password" ref={password} required />
 								</Form.Group>
 								<Form.Group id='passwordConfirm'>
 									<Form.Label>Confirm Password</Form.Label>
-									<Form.Control type='password' ref={passwordConfirm} required />
+									<Form.Control type='password' autoComplete="new-password" ref={passwordConfirm} required />
 								</Form.Group>
 								<Button type='submit' className={`w-100 mt-2 ${loading && 'disabled'}`}>
-									Log in
+									Sign up
 								</Button>
 								{error && (
 									<Alert className='mt-2' variant='danger'>
