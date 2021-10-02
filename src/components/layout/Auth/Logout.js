@@ -1,7 +1,7 @@
 import React, { useContext, useEffect } from 'react'
 import { Button, Card } from 'react-bootstrap'
 import { useHistory } from 'react-router'
-import AuthContext from '../../context/auth/authContext'
+import AuthContext from '../../../context/auth/authContext'
 
 export const Logout = () => {
 	const authContext = useContext(AuthContext)
