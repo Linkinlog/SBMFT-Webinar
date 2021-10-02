@@ -15,13 +15,12 @@ nav.bg-light {
   background-color: var(--main-dark-color) !important;
 }
 
-@media screen and (max-device-width: 620px) {
-  .navbar-brand{
-    font-size: 0.5rem !important;
-  }
+.navbar-brand{
+  font-size: .85rem !important;
 }
 
-@media screen and (max-device-width: 620px) and (min-device-width: 320px) {
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 620px)  {
   .navbar-brand{
     font-size: 0.65em !important;
   }
@@ -38,7 +37,7 @@ a.videoCard {
   color: initial;
 }
 
-img.card-img-top {
+.card-img {
   max-height: 50vh;
 }
 

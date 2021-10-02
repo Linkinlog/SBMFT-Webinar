@@ -1,11 +1,15 @@
-import React, { useContext } from 'react';
+import React, { useContext, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import AuthContext from '../../context/auth/authContext';
 
 export const Navbar = () => {
 	const authContext = useContext(AuthContext);
 	const { isAuthenticated } = authContext;
-
+	const nav = useRef()
+	const onClick = () => {
+		nav.current.classList.contains('show') && nav.current.classList.remove('show') 
+	}
+	
 	return (
 		<nav className='navbar navbar-expand-lg navbar-dark bg-light'>
 			<div className='container-fluid'>
@@ -15,7 +19,7 @@ export const Navbar = () => {
 				<button className='navbar-toggler' type='button' data-bs-toggle='collapse' data-bs-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation'>
 					<span className='navbar-toggler-icon'></span>
 				</button>
-				<div className='collapse navbar-collapse' id='navbarNav'>
+				<div ref={nav} onClick={onClick} className='collapse navbar-collapse' id='navbarNav'>
 					<ul className='navbar-nav ms-auto'>
 						<li className='nav-item'>
 							<Link className='nav-link' to='/'>
