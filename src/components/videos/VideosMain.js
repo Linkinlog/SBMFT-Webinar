@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Container, Row } from 'react-bootstrap';
 import { SingleVideo } from './SingleVideo';
 
 export const VideosMain = () => {
@@ -41,15 +42,15 @@ export const VideosMain = () => {
 		},
 	]);
 	return (
-		<div className='container-fluid'>
-			<div className="row">
+		<Container fluid>
+			<Row>
 				<SingleVideo video={video[0]} />
-			</div>
-			<div className='row row-cols-2 row-cols-md-4 g-4 mt-4'>
+			</Row>
+			<Row md={4} className='row-cols-2 g-4 mt-4'>
 				{video.map((vid) => (
 					<SingleVideo video={vid} key={vid.id} />
 				))}
-			</div>
-		</div>
+			</Row>
+		</Container>
 	);
 };
