@@ -7,22 +7,32 @@ import AuthState from './context/auth/AuthState';
 import { Login } from './components/layout/Auth/Login';
 import { Logout } from './components/layout/Auth/Logout';
 import { ForgotPassword } from './components/layout/Auth/ForgotPassword';
+import { PrivateRoute } from './components/PrivateRoute';
+import { Promo } from './components/layout/Promo';
+import VideoPlayer from './components/videos/VideoPlayer';
+import { Col, Container, Row } from 'react-bootstrap';
+import AdColumn from './components/layout/AdColumn';
+import VideoState from './context/video/VideoState';
 
 const App = () => {
 	return (
 		<AuthState>
-			<Router>
-				<Navbar />
-				<div className='container'>
-					<Switch>
-						<Route exact path='/' component={Home} />
-						<Route exact path='/signup' component={SignUp} />
-						<Route exact path='/login' component={Login} />
-						<Route exact path='/logout' component={Logout} />
-						<Route exact path='/forgot-password' component={ForgotPassword} />
-					</Switch>
-				</div>
-			</Router>
+			<VideoState>
+				<Router>
+					<Navbar />
+					<Container fluid>
+						<Switch>
+							<Route path='/signup' component={SignUp} />
+							<Route path='/login' component={Login} />
+							<Route path='/logout' component={Logout} />
+							<Route path='/forgot-password' component={ForgotPassword} />
+							<Route path='/video/:id' component={VideoPlayer} />
+							<PrivateRoute exact path='/' component={Home} />
+							<Route exact path='/promo' component={Promo} />
+						</Switch>
+					</Container>
+				</Router>
+			</VideoState>
 		</AuthState>
 	);
 };
