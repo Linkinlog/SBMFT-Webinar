@@ -1,18 +1,16 @@
 import React, { useContext } from 'react'
-import { Redirect, Route } from 'react-router'
+import { Route, Redirect } from 'react-router-dom'
 import AuthContext from '../context/auth/authContext'
 
 export const PrivateRoute = ({component: Component, ...rest}) => {
 	const authContext = useContext(AuthContext)
-	const { user } = authContext;
+	const { isAuthenticated } = authContext;
 	
 	return (
-		<Route {...rest} render={props => {
-			user ? (
-				<Component {...props} />
-			) : (
-				<Redirect to='/login' />
-			)
+		<Route
+			{...rest}
+			render={props => {
+			return isAuthenticated ? <Component {...props} /> : <Redirect to="/promo" />
 		}}>
 			
 		</Route>
