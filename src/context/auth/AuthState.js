@@ -2,15 +2,13 @@ import React, { useEffect, useReducer, useState } from 'react';
 import AuthContext from './authContext';
 import authReducer from './authReducer';
 import { auth } from '../../Config';
-// eslint-disable-next-line
-import { REGISTER_SUCCESS, REGISTER_FAIL, USER_LOADED, AUTH_ERROR, LOGIN_SUCCESS, LOGIN_FAIL, LOGOUT, CLEAR_ERRORS } from '../types';
+import {LOGIN_SUCCESS, LOGOUT } from '../types';
 
 const AuthState = (props) => {
 	const [loading, setLoading] = useState(true);
 	const initialState = {
 		isAuthenticated: null,
 		user: null,
-		// loading: true,
 	};
 	const [state, dispatch] = useReducer(authReducer, initialState);
 
