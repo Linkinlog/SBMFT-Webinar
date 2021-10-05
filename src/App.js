@@ -10,7 +10,7 @@ import { ForgotPassword } from './components/layout/Auth/ForgotPassword';
 import { PrivateRoute } from './components/PrivateRoute';
 import { Promo } from './components/layout/Promo';
 import VideoPlayer from './components/videos/VideoPlayer';
-import { Col, Container, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
 import VideoState from './context/video/VideoState';
 
 const App = () => {
