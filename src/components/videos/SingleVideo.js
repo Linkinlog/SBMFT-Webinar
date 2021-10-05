@@ -16,7 +16,6 @@ export const SingleVideo = ({ video }) => {
 					<Card.Body>
 						<Card.Title>{video?.title}</Card.Title>
 						<Card.Text>{video?.desc.substring(0, 40)}...</Card.Text>
-						<Card.Text>{video?.id}</Card.Text>
 					</Card.Body>
 				</Card>
 			</Link>
