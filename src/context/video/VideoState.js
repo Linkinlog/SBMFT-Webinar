@@ -7,63 +7,74 @@ const VideoState = ({ children }) => {
 		videos: [
 			{
 				id: 1,
-				title: 'Fancy catchy unique title',
+				title: 'Communication with couples',
 				desc: 'words that are describing the video that will enrich your life. ',
-				imageURL: 'https://source.unsplash.com/random/?therapy',
+				imageURL: 'https://img.youtube.com/vi/4gz-a19Sj1k/0.jpg',
+				videoURL: 'https://youtube.com/embed/4gz-a19Sj1k',
+				isPurchased: true
 			},
 			{
 				id: 2,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 3,
 				title: 'Fancy catchy unique title',
-				desc: 'words that are describing the video that will enrich your life. ',
+			desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 4,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 5,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 6,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 7,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 8,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 9,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 			{
 				id: 10,
 				title: 'Fancy catchy unique title',
 				desc: 'words that are describing the video that will enrich your life. ',
 				imageURL: 'https://source.unsplash.com/random/?therapy',
+				isPurchased: false
 			},
 		],
 		promoVid: {
@@ -71,7 +82,8 @@ const VideoState = ({ children }) => {
 			title: 'Main promotional video!',
 			desc: 'words that are describing the video that will enrich your life. ',
 			imageURL: 'https://source.unsplash.com/random/?therapy',
-			purchased: true,
+			videoURL: 'https://youtube.com/embed/mIDp_TrovRs',
+			isPurchased: true,
 		},
 	};
 	const [state] = useReducer(videoReducer, initialState);
