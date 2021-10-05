@@ -25,15 +25,25 @@ nav.bg-light {
 	background-color: var(--main-dark-color) !important;
 }
 
-.navbar-brand {
-	font-size: 0.85rem !important;
-}
 
-@media only screen and (min-device-width: 320px) and (max-device-width: 620px) {
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
 	.navbar-brand {
 		font-size: 0.65em !important;
 	}
 }
+
+@media only screen and (min-device-width: 425px) and (max-device-width: 768px) {
+	.navbar-brand {
+		font-size: 1rem !important;
+	}
+}
+
+@media only screen and (min-device-width: 768px) {
+	.navbar-brand {
+		font-size: 1.5rem !important;
+	}
+}
+
 
 .shadow1 {
 	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
