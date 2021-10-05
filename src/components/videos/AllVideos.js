@@ -5,7 +5,7 @@ const AllVideos = ({ videos }) => {
 	return (
 		<>
 			{videos.map((vid) => (
-				<SingleVideo video={vid} key={vid.id} />
+				<SingleVideo video={vid} key={vid?.id} />
 			))}
 		</>
 	);
