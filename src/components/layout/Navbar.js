@@ -26,11 +26,6 @@ export const Navbar = () => {
 								Home
 							</Link>
 						</li>
-						<li className='nav-item'>
-							<Link className='nav-link' to='/about'>
-								About
-							</Link>
-						</li>
 					</ul>
 					{isAuthenticated ? (
 						<ul className='navbar-nav'>
